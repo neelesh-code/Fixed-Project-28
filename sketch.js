@@ -91,7 +91,7 @@ mpos= mango.body.position
 spos=stone.body.position
 
 var distance=dist(spos.x, spos.y, mpos.x, mpos.y)
-if(distance<=mpos.r+spos.r){
+if(distance<=mango.r+stone.r){
 	Matter.Body.setStatic(mango.body, false)
 }
 
@@ -102,7 +102,7 @@ function keyPressed(){
 	if(keyCode === 32){
 		Matter.Body.setPosition(stone1.body, {x: 150,y: 500})
 
-		throw1.attach(bird.body);
+		throw1.attach(stone1.body);
 		
 	}
 
